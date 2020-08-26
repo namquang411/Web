@@ -1,0 +1,11 @@
+[
+    {
+      "title": "All Day Event",
+      "start": "2014-09-01"
+    },
+    {
+      "title": "Long Event",
+      "start": "2014-09-07",
+      "end": "2014-09-10"
+    }
+]

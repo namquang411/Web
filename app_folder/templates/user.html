@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<table>
+		<tr valign = "top">
+			<td>
+				<h1>User:{{user.username}}</h1>
+				{% if user.about_me%}<p>{{user.about_me}}</p>{%endif%}
+				{% if user == current_user%}
+				<p><a href="{{url_for('change_password')}}">Change Password</a></p>
+				<p><a href="{{url_for('appointment')}}">Add Appointment</a></p>
+				<p>You can <a href="{{ url_for( 'select_record', letters='AF' ) }}">select an appointment for editing</a>.</p>
+				{% endif %}
+			</td>
+		</tr>
+	</table>
+	<hr>
+	{% for post in posts%}
+		{% include '_post.html' %}
+{%endfor%}
+{%endblock%}
